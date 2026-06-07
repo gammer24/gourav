@@ -1,0 +1,15 @@
+{
+  "name": "automobile-app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Full-stack automobile web application with React, Express, and MongoDB.",
+  "scripts": {
+    "install:all": "npm.cmd install --prefix backend && npm.cmd install --prefix frontend",
+    "server": "npm.cmd run dev --prefix backend",
+    "client": "npm.cmd start --prefix frontend",
+    "dev": "concurrently \"npm.cmd run dev --prefix backend\" \"npm.cmd start --prefix frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

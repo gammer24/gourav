@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaCart | Modern E-Commerce Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <div class="brand">
+          <span class="brand-mark">N</span>
+          <div>
+            <p>NovaCart</p>
+            <span>Smart shopping, simplified</span>
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <button class="ghost-button" id="browseDealsButton">Browse Deals</button>
+          <button class="cart-button" id="cartToggle">
+            Cart
+            <span id="cartCount">0</span>
+          </button>
+        </div>
+      </nav>
+
+      <section class="hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">Fresh arrivals | Best picks | Fast checkout</p>
+          <h1>Build your dream setup with one clean shopping experience.</h1>
+          <p class="hero-text">
+            Explore curated gadgets, fashion, and lifestyle products in a sleek JavaScript storefront.
+            Filter products, save favorites, and manage your cart in seconds.
+          </p>
+
+          <div class="hero-actions">
+            <button class="primary-button" id="shopNowButton">Shop Now</button>
+            <button class="secondary-button" id="featuredButton">Featured Products</button>
+          </div>
+
+          <div class="hero-stats">
+            <article>
+              <strong>120+</strong>
+              <span>Premium products</span>
+            </article>
+            <article>
+              <strong>4.9/5</strong>
+              <span>Customer rating</span>
+            </article>
+            <article>
+              <strong>24h</strong>
+              <span>Quick dispatch</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <p class="mini-label">Weekly highlight</p>
+          <h2>Ultimate Creator Bundle</h2>
+          <p>Wireless headphones, mechanical keyboard, and a 4K webcam combined for productivity.</p>
+          <div class="bundle-price">
+            <strong>$699</strong>
+            <span>$899</span>
+          </div>
+          <div class="bundle-tags">
+            <span>Free Shipping</span>
+            <span>2 Year Warranty</span>
+            <span>Top Rated</span>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="content">
+      <section class="section-heading">
+        <div>
+          <p class="eyebrow">Store Collection</p>
+          <h2>Find products that match your style</h2>
+        </div>
+        <p class="section-text">
+          Use category filters and live search to browse the collection like a real shopping app.
+        </p>
+      </section>
+
+      <section class="controls">
+        <div class="search-box">
+          <label for="searchInput">Search products</label>
+          <input id="searchInput" type="text" placeholder="Search by name or category">
+        </div>
+
+        <div class="filter-group">
+          <span>Categories</span>
+          <div class="filter-pills" id="categoryFilters"></div>
+        </div>
+      </section>
+
+      <section class="promo-grid">
+        <article>
+          <p>Exclusive</p>
+          <h3>Weekend Flash Sale</h3>
+          <span>Save up to 35% on tech essentials</span>
+        </article>
+        <article>
+          <p>New</p>
+          <h3>Spring Fashion Edit</h3>
+          <span>Minimal styles with premium fabrics</span>
+        </article>
+        <article>
+          <p>Popular</p>
+          <h3>Home Upgrade Picks</h3>
+          <span>Smart accessories for modern living</span>
+        </article>
+      </section>
+
+      <section class="products-section">
+        <div class="products-header">
+          <h3>Products</h3>
+          <p id="resultsInfo">Showing all products</p>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+    </main>
+
+    <aside class="cart-panel" id="cartPanel" aria-hidden="true">
+      <div class="cart-panel-header">
+        <div>
+          <p class="eyebrow">Shopping Cart</p>
+          <h3>Your order</h3>
+        </div>
+        <button class="close-button" id="closeCartButton" aria-label="Close cart">X</button>
+      </div>
+
+      <div class="cart-items" id="cartItems"></div>
+
+      <div class="cart-summary">
+        <div>
+          <span>Subtotal</span>
+          <strong id="subtotalValue">$0.00</strong>
+        </div>
+        <div>
+          <span>Shipping</span>
+          <strong>Free</strong>
+        </div>
+        <div class="total-row">
+          <span>Total</span>
+          <strong id="totalValue">$0.00</strong>
+        </div>
+        <button class="primary-button checkout-button" id="checkoutButton">Proceed to Checkout</button>
+      </div>
+    </aside>
+  </div>
+
+  <template id="productCardTemplate">
+    <article class="product-card">
+      <div class="product-visual">
+        <span class="product-badge"></span>
+      </div>
+      <div class="product-body">
+        <div class="product-meta">
+          <p class="product-category"></p>
+          <span class="product-rating"></span>
+        </div>
+        <h4 class="product-name"></h4>
+        <p class="product-description"></p>
+        <div class="product-footer">
+          <div class="product-price-wrap">
+            <strong class="product-price"></strong>
+            <span class="product-original-price"></span>
+          </div>
+          <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
