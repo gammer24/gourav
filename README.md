@@ -1,15 +1,15 @@
-# NovaCart E-Commerce Website
+# Kiran Software Pvt Ltd AI Website
 
-This is a front-end e-commerce website built with plain JavaScript, HTML, and CSS.
+A responsive front-end website for **Kiran Software Pvt Ltd**, focused on AI-powered products built with JavaScript UI.
 
 ## Features
 
-- Responsive modern landing page
-- Product search and category filters
-- Add to cart and quantity controls
-- Live subtotal and checkout demo
+- Modern landing page for an AI software product company
+- Interactive JavaScript product filtering and search
+- Responsive mobile navigation
+- Contact form demo with live confirmation messaging
 - Works by opening `index.html` directly in a browser
 
 ## Run
 
-Open `index.html` in any browser.
+Open `index.html` in any browser, or serve the folder with a simple static server.

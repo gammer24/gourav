@@ -1,13 +1,11 @@
 {
-  "name": "automobile-app",
+  "name": "kiran-software-ai-website",
   "private": true,
   "version": "1.0.0",
-  "description": "Full-stack automobile web application with React, Express, and MongoDB.",
+  "description": "Static JavaScript UI website for Kiran Software Pvt Ltd AI products.",
   "scripts": {
-    "install:all": "npm.cmd install --prefix backend && npm.cmd install --prefix frontend",
-    "server": "npm.cmd run dev --prefix backend",
-    "client": "npm.cmd start --prefix frontend",
-    "dev": "concurrently \"npm.cmd run dev --prefix backend\" \"npm.cmd start --prefix frontend\""
+    "start": "python3 -m http.server 4173",
+    "test": "node --check script.js"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
