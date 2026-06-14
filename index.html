@@ -3,180 +3,192 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NovaCart | Modern E-Commerce Store</title>
+  <meta name="description" content="Kiran Software Pvt Ltd builds AI-powered JavaScript UI products for modern enterprises.">
+  <title>Kiran Software Pvt Ltd | AI JavaScript UI Products</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="site-shell">
-    <header class="hero">
-      <nav class="topbar">
-        <div class="brand">
-          <span class="brand-mark">N</span>
-          <div>
-            <p>NovaCart</p>
-            <span>Smart shopping, simplified</span>
-          </div>
-        </div>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
 
-        <div class="nav-actions">
-          <button class="ghost-button" id="browseDealsButton">Browse Deals</button>
-          <button class="cart-button" id="cartToggle">
-            Cart
-            <span id="cartCount">0</span>
-          </button>
+  <div class="site-shell">
+    <header class="hero" id="home">
+      <nav class="topbar" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="Kiran Software Pvt Ltd home">
+          <span class="brand-mark">KS</span>
+          <span>
+            <strong>Kiran Software</strong>
+            <small>Pvt Ltd</small>
+          </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+        <div class="nav-links" id="navLinks">
+          <a href="#products">Products</a>
+          <a href="#platform">Platform</a>
+          <a href="#industries">Industries</a>
+          <a href="#contact">Contact</a>
         </div>
       </nav>
 
-      <section class="hero-content">
+      <section class="hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Fresh arrivals | Best picks | Fast checkout</p>
-          <h1>Build your dream setup with one clean shopping experience.</h1>
+          <p class="eyebrow">AI-first JavaScript UI product studio</p>
+          <h1>Launch intelligent web experiences with Kiran Software Pvt Ltd.</h1>
           <p class="hero-text">
-            Explore curated gadgets, fashion, and lifestyle products in a sleek JavaScript storefront.
-            Filter products, save favorites, and manage your cart in seconds.
+            We design product-ready AI dashboards, copilots, and automation interfaces with fast,
+            accessible JavaScript UI components for teams that need results now.
           </p>
 
           <div class="hero-actions">
-            <button class="primary-button" id="shopNowButton">Shop Now</button>
-            <button class="secondary-button" id="featuredButton">Featured Products</button>
+            <a class="primary-button" href="#contact">Book AI Consultation</a>
+            <a class="secondary-button" href="#products">Explore Products</a>
           </div>
 
-          <div class="hero-stats">
+          <div class="metrics" aria-label="Company highlights">
             <article>
-              <strong>120+</strong>
-              <span>Premium products</span>
+              <strong>40%</strong>
+              <span>faster UI delivery</span>
             </article>
             <article>
-              <strong>4.9/5</strong>
-              <span>Customer rating</span>
+              <strong>24/7</strong>
+              <span>AI assistant workflows</span>
             </article>
             <article>
-              <strong>24h</strong>
-              <span>Quick dispatch</span>
+              <strong>99.9%</strong>
+              <span>cloud-ready uptime goal</span>
             </article>
           </div>
         </div>
 
-        <div class="hero-card">
-          <p class="mini-label">Weekly highlight</p>
-          <h2>Ultimate Creator Bundle</h2>
-          <p>Wireless headphones, mechanical keyboard, and a 4K webcam combined for productivity.</p>
-          <div class="bundle-price">
-            <strong>$699</strong>
-            <span>$899</span>
+        <div class="ai-console" aria-label="Kiran AI product preview">
+          <div class="console-header">
+            <span></span><span></span><span></span>
+            <strong>KiranAI Console</strong>
           </div>
-          <div class="bundle-tags">
-            <span>Free Shipping</span>
-            <span>2 Year Warranty</span>
-            <span>Top Rated</span>
+          <div class="console-card active">
+            <small>Live insight</small>
+            <h2>Customer intent detected</h2>
+            <p>AI recommends a guided onboarding flow and support article suggestions.</p>
+          </div>
+          <div class="signal-grid">
+            <article>
+              <b>86%</b>
+              <span>Lead score</span>
+            </article>
+            <article>
+              <b>12ms</b>
+              <span>UI response</span>
+            </article>
+          </div>
+          <div class="prompt-box">
+            <span>Ask AI</span>
+            <p id="typedPrompt">Generate a JavaScript dashboard for sales predictions...</p>
           </div>
         </div>
       </section>
     </header>
 
-    <main class="content">
-      <section class="section-heading">
-        <div>
-          <p class="eyebrow">Store Collection</p>
-          <h2>Find products that match your style</h2>
-        </div>
-        <p class="section-text">
-          Use category filters and live search to browse the collection like a real shopping app.
+    <main>
+      <section class="section-heading" id="products">
+        <p class="eyebrow">Product suite</p>
+        <h2>AI products built on modern JavaScript UI.</h2>
+        <p>
+          Pick the product line that matches your transformation goal. The interactive filters below
+          show how Kiran Software can package AI capabilities into clean web interfaces.
         </p>
       </section>
 
-      <section class="controls">
-        <div class="search-box">
-          <label for="searchInput">Search products</label>
-          <input id="searchInput" type="text" placeholder="Search by name or category">
-        </div>
+      <section class="controls" aria-label="Product filters">
+        <label class="search-box" for="searchInput">
+          <span>Search products</span>
+          <input id="searchInput" type="search" placeholder="Search copilots, analytics, automation...">
+        </label>
+        <div class="filter-pills" id="categoryFilters" aria-label="Product categories"></div>
+      </section>
 
-        <div class="filter-group">
-          <span>Categories</span>
-          <div class="filter-pills" id="categoryFilters"></div>
+      <section class="product-grid" id="productGrid" aria-live="polite"></section>
+
+      <section class="platform" id="platform">
+        <div>
+          <p class="eyebrow">Why Kiran Software</p>
+          <h2>From idea to production UI with AI baked in.</h2>
+          <p>
+            Our delivery model combines product strategy, reusable JavaScript components, AI model
+            integration, and secure deployment so your teams can ship confidently.
+          </p>
+        </div>
+        <div class="platform-steps">
+          <article>
+            <span>01</span>
+            <h3>Discover</h3>
+            <p>Map business workflows and identify where AI assistants reduce manual effort.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Design</h3>
+            <p>Create responsive JavaScript UI prototypes with dashboards, prompts, and approvals.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Deploy</h3>
+            <p>Integrate APIs, analytics, and cloud hosting with a production-ready handoff.</p>
+          </article>
         </div>
       </section>
 
-      <section class="promo-grid">
-        <article>
-          <p>Exclusive</p>
-          <h3>Weekend Flash Sale</h3>
-          <span>Save up to 35% on tech essentials</span>
-        </article>
-        <article>
-          <p>New</p>
-          <h3>Spring Fashion Edit</h3>
-          <span>Minimal styles with premium fabrics</span>
-        </article>
-        <article>
-          <p>Popular</p>
-          <h3>Home Upgrade Picks</h3>
-          <span>Smart accessories for modern living</span>
-        </article>
+      <section class="industries" id="industries">
+        <div class="section-heading compact">
+          <p class="eyebrow">Industries</p>
+          <h2>AI UI accelerators for every team.</h2>
+        </div>
+        <div class="industry-grid">
+          <article>Finance automation</article>
+          <article>Healthcare operations</article>
+          <article>Retail personalization</article>
+          <article>Education copilots</article>
+        </div>
       </section>
 
-      <section class="products-section">
-        <div class="products-header">
-          <h3>Products</h3>
-          <p id="resultsInfo">Showing all products</p>
+      <section class="contact" id="contact">
+        <div>
+          <p class="eyebrow">Start a project</p>
+          <h2>Ready to build your AI product?</h2>
+          <p>Tell us what you want to automate and receive a tailored JavaScript UI roadmap.</p>
         </div>
-
-        <div class="product-grid" id="productGrid"></div>
+        <form class="contact-form" id="contactForm">
+          <label>
+            Name
+            <input name="name" type="text" placeholder="Your name" required>
+          </label>
+          <label>
+            Work email
+            <input name="email" type="email" placeholder="name@company.com" required>
+          </label>
+          <label>
+            Project goal
+            <textarea name="message" rows="4" placeholder="Describe your AI product idea" required></textarea>
+          </label>
+          <button class="primary-button" type="submit">Send Project Brief</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
       </section>
     </main>
-
-    <aside class="cart-panel" id="cartPanel" aria-hidden="true">
-      <div class="cart-panel-header">
-        <div>
-          <p class="eyebrow">Shopping Cart</p>
-          <h3>Your order</h3>
-        </div>
-        <button class="close-button" id="closeCartButton" aria-label="Close cart">X</button>
-      </div>
-
-      <div class="cart-items" id="cartItems"></div>
-
-      <div class="cart-summary">
-        <div>
-          <span>Subtotal</span>
-          <strong id="subtotalValue">$0.00</strong>
-        </div>
-        <div>
-          <span>Shipping</span>
-          <strong>Free</strong>
-        </div>
-        <div class="total-row">
-          <span>Total</span>
-          <strong id="totalValue">$0.00</strong>
-        </div>
-        <button class="primary-button checkout-button" id="checkoutButton">Proceed to Checkout</button>
-      </div>
-    </aside>
   </div>
 
   <template id="productCardTemplate">
     <article class="product-card">
-      <div class="product-visual">
-        <span class="product-badge"></span>
+      <div class="card-top">
+        <span class="product-icon"></span>
+        <span class="product-category"></span>
       </div>
-      <div class="product-body">
-        <div class="product-meta">
-          <p class="product-category"></p>
-          <span class="product-rating"></span>
-        </div>
-        <h4 class="product-name"></h4>
-        <p class="product-description"></p>
-        <div class="product-footer">
-          <div class="product-price-wrap">
-            <strong class="product-price"></strong>
-            <span class="product-original-price"></span>
-          </div>
-          <button class="add-to-cart-button">Add to Cart</button>
-        </div>
-      </div>
+      <h3 class="product-name"></h3>
+      <p class="product-description"></p>
+      <ul class="feature-list"></ul>
+      <button class="secondary-button product-action" type="button">View AI Workflow</button>
     </article>
   </template>
 
